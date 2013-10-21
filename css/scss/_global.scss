@@ -18,6 +18,12 @@ dl, ol, ul 	{ margin-bottom: $baseLineHeight; line-height: $baseLineHeight; }
 ol, ul 			{ margin: 0 0 $baseLineHeight $baseLineHeight; padding: 0 0 0 $baseLineHeight; }
 li ol, li ul 	{ margin: 0; }
 
+input,
+select,
+textarea { display: block; width: 100%; }
+
+label { display: block; }
+
 .unstyled { margin: 0; padding: 0; list-style: none;
 	li { margin-left: 0; }
 }
