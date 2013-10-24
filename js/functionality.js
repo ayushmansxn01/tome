@@ -23,17 +23,15 @@ function resetStyles() {
 }
 
 //Set up generic toggle function to reduce repetitive toggle code
-function setToggle(theToggle, toToggle, activeParent, callbackOpen, callbackClose) {
+function setToggle(theToggle, toToggle, callbackOpen, callbackClose) {
   theToggle.toggle(function() {
     theToggle.addClass('is-active');
-    if(activeParent) jQuery(this).parent().addClass('is-active');
     toToggle.slideDown();
     toToggle.addClass('is-open');
     callbackOpen();
   }, function() {
     toToggle.slideUp();
     toToggle.removeClass('is-open');
-    if(activeParent) jQuery(this).parent().removeClass('is-active');
     theToggle.removeClass('is-active');
     callbackClose();
   });
